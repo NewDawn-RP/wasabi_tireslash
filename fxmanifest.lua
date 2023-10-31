@@ -10,11 +10,16 @@ author 'wasabirobby#5110'
 version '1.0.4'
 
 client_scripts {
+    "shared/utils.lua",
     'client/**.lua'
 }
 
 server_scripts {
-    'server/**.lua'
+    "shared/utils.lua",
+    'server/**.lua',
 }
 
-shared_script 'config.lua'
+shared_scripts {
+    'config.lua',
+    '@ox_lib/init.lua',
+} 

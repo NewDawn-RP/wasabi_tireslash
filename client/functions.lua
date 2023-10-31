@@ -7,9 +7,12 @@ loadDict = function(dict)
 end
 
 ShowNotification = function(msg)
-	SetNotificationTextEntry('STRING')
-	AddTextComponentString(msg)
-	DrawNotification(0,1)
+	lib.notify({
+		title = msg,
+		position = 'center-right',
+		icon = 'fa-solid fa-user-ninja',
+		iconColor = '#ca0000'
+	})
 end
 
 
